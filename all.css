@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle;
+}
+/* css reset end */
+
+body{
+    font-size: 24px;
+    font-style: italic;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif; */
+    font-family: "Roboto", "Microsoft JhengHei",sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.p-g-bold{
+    font-weight: 700;
+}
+
+.p-g-black{
+    font-weight: 900;
+}
+
+/* 表頭 */
+.header{
+    height: 958px;
+    background-image: url(https://upload.cc/i1/2022/07/18/iwDN2a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header ul{ 
+    width: 320px;
+    margin: 0 auto;
+    padding: 308px 0;
+    text-align: left;
+}
+
+.p-white{
+    color: white;
+}
+
+.p-white h1{
+    font-size: 80px;
+    line-height: 1.325;
+}
+
+.header-li{
+    margin-top: 32px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    padding-left: 13px;
+}
+
+.header-icon{
+    text-align: center;
+}
+
+.icon{
+    padding-right: 16px;
+}
+
+/* 個人資料 */
+.title-h2{
+    font-size: 64px;
+    padding-top: 56px;
+    line-height: 1.3125;
+}
+
+.personal-h2{
+    margin-bottom: 40px;
+}
+
+.personal-img{
+    margin-bottom: 20px;
+}
+
+.self-list-1{
+    margin-bottom: 4px;
+}
+
+.self-list-2{
+    margin-bottom: 8px;
+}
+
+.self-list-3{
+    line-height: 1.5;
+}
+
+.self-list{
+    margin-bottom: 24px;
+}
+
+.study{
+    width: 384px;
+    border-top: 1px solid #000;
+    margin-bottom: 56px;
+}
+
+.study li{
+    padding-top: 28px;
+}
+
+.study li::before{
+    content: "";
+	width: 22px;
+	height: 22px;
+    border-radius: 50%;
+	background-color: #891818;
+    /* 因為偽元素是行內元素，行內元素特性是寬高度要由內容物撐出來，沒有加display: inline-block時，這個偽元素/行內元素的內容物是一個空字串，所以撐不出高度，才會在畫面上看不到紅點 */
+    display: inline-block;
+    margin-right: 16px;
+}
+
+/* 法2. */
+
+/* .study li{}沒有寫flex的話，偽元素before就需要自己變成區塊元素，才能撐出行內元素自己的高度。所以沒有加flex時，畫面也會沒看到紅點，因為行內元素裡是空字串 */
+/* .study li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.study li::before {
+    content:"";
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #891818;
+    margin-right: 16px;
+} */
+
+
+/* 個人品牌 */
+.content{
+    background-color: black;
+}
+
+.brand{
+    padding-bottom: 160px;
+}
+
+.brand-h2{
+    margin-bottom: 12px;
+}
+
+.brand-p-1{
+    margin-bottom: 32px;
+}
+
+.p-s{
+    font-size: 20px;
+    line-height: 1.5;
+    /* 中文字型font-style是預設 */
+    font-style: normal;
+}
+
+.brand-p-2{
+    margin-bottom: 68px;
+}
+
+.ul-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.brand-img-1{
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.brand-img-2{
+    margin-right: 24px;
+}
+
+/* 法2-start */
+/* .brand-img{
+    margin-bottom: 40px;
+}
+
+.brand ul{
+    display: flex;
+    justify-content: center;
+}
+
+.brand li{
+    margin-left: 24px;
+} */
+/* 法2-end */
+
+
+/* 作品集 */
+.worklist-h2{
+    margin-bottom: 16px;
+}
+
+.worklist-p-1{
+    margin-bottom: 56px;
+}
+
+.worklist-img-1{
+    margin-right: 24px;
+}
+
+.w-img p{
+    margin-top: 16px;
+    margin-bottom: 48px;
+    line-height: 2.1;
+}
+
+.worklist-img{
+    margin-bottom: 144px;
+}
+
+.w-img-b p{
+    margin-top: 16px;
+    line-height: 2.1;
+}
+
+/* 法2-start */
+/* .worklist-img li{
+    margin-left: 24px;
+}
+
+.worklist-img p{
+    margin-top: 16px;
+    margin-bottom: 48px;
+    line-height: 2.1;
+}
+
+.worklist-img-bottom p{
+    margin-bottom: 144px;
+} */
+/* 法2-end */
+
+
+/* 聯絡 */
+.contact-h2,.contact-p-1{
+    margin-bottom: 16px;
+}
+
+.contact ul{
+    padding-bottom: 64px;
+}
+
+.contact li{
+    line-height: 1.5;
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact a:hover{
+    color: aquamarine;
+}
