@@ -66,11 +66,12 @@ body{
 }
 
 .container{
+    /* 格線區塊=1920-兩邊距360=1200 */
     width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
+/* 字型 */
 .p-g-bold{
     font-weight: 700;
 }
@@ -79,33 +80,61 @@ body{
     font-weight: 900;
 }
 
-/* 表頭 */
-.header{
-    height: 958px;
-    background-image: url(https://upload.cc/i1/2022/07/18/iwDN2a.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.header ul{ 
-    width: 320px;
-    margin: 0 auto;
-    padding: 308px 0;
-    text-align: left;
+/* 顏色 */
+.bg-black{
+    background-color: black;
 }
 
 .p-white{
     color: white;
 }
 
-.p-white h1{
+/* 對齊 */
+.ta-c{
+    text-align: center;
+}
+
+.ta-l{
+    text-align: left;
+}
+
+/* 距離 */
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.pt-308{
+    padding-top: 308px;
+}
+
+.pb-308{
+    padding-bottom: 308px;
+}
+
+/* 表頭 */
+header{
+    height: 958px;
+    background-image: url(https://upload.cc/i1/2022/07/18/iwDN2a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .container{ 
+    width: 320px;
+    margin: 0 auto;
+}
+
+header span{
+    display: block;
+}
+
+h1{
     font-size: 80px;
     line-height: 1.325;
 }
 
-.header-li{
+header p{
     margin-top: 32px;
-    margin-bottom: 40px;
     line-height: 1.5;
     padding-left: 13px;
 }
@@ -153,6 +182,8 @@ body{
     width: 384px;
     border-top: 1px solid #000;
     margin-bottom: 56px;
+    /* 為要吃到父層section的置中ta-c設定 */
+    display: inline-block;
 }
 
 .study li{
@@ -190,10 +221,6 @@ body{
 
 
 /* 個人品牌 */
-.content{
-    background-color: black;
-}
-
 .brand{
     padding-bottom: 160px;
 }
@@ -224,7 +251,6 @@ body{
 }
 
 .brand-img-1{
-    margin: 0 auto;
     margin-bottom: 40px;
 }
 
