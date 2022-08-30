@@ -182,7 +182,7 @@ header p{
     width: 384px;
     border-top: 1px solid #000;
     margin-bottom: 56px;
-    /* 為要吃到父層section的置中ta-c設定 */
+    /* 為要吃到父層section的置中ta-c設定。加了後可以拿掉<section>的container設定  */
     display: inline-block;
 }
 
